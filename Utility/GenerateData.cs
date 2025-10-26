@@ -10,12 +10,12 @@ namespace LINQ.Utility
 {
     internal class GenerateData
     {
-        internal static IEnumerable<Employee> GenerateEmployees()
+        internal static IEnumerable<Employee> GetEmployees()
         {
             return Employees();
         }
 
-        internal static IEnumerable<Department> GenerateDepartments()
+        internal static IEnumerable<Department> GetDepartments()
         {
             return Departments();
         }
