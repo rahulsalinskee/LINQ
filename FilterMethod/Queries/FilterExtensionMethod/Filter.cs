@@ -13,7 +13,10 @@ namespace LINQ.FilterMethod.Queries.FilterExtensionMethod
         internal static void ExecuteFilter()
         {
             Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("--------------------- Filter ---------------------");
+            Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Filter \n\n");
+
             var employees = GenerateData.GetEmployees();
 
             var filteredEmployees = employees.Filter(employee => employee.AnnualSalary > 60000 && employee.IsManager is true);
