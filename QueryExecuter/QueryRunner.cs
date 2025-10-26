@@ -1,4 +1,4 @@
-﻿using LINQ.Queries.FilterExtensionMethod;
+﻿using LINQ.FilterMethod.Queries.FilterExtensionMethod;
 using System;
 using System.Collections.Generic;
 using System.Linq;
