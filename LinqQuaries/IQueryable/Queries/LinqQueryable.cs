@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.IQueryable.Queries
+namespace LINQ.LinqQuaries.IQueryable.Queries
 {
     internal static class LinqQueryable
     {

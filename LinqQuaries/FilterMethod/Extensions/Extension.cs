@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.FilterMethod.Extensions
+namespace LINQ.LinqQuaries.FilterMethod.Extensions
 {
     public static class FilterExtension
     {

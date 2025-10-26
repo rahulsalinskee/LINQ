@@ -1,6 +1,6 @@
-﻿using LINQ.FilterMethod.Queries.FilterExtensionMethod;
-using LINQ.IQueryable.Queries;
-using LINQ.SelectManyMethod.Queries;
+﻿using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
+using LINQ.LinqQuaries.IQueryable.Queries;
+using LINQ.LinqQuaries.SelectManyMethod.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

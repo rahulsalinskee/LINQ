@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.SelectManyMethod.Queries
+namespace LINQ.LinqQuaries.SelectManyMethod.Queries
 {
     internal class LinkSelectMany
     {
