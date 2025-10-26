@@ -1,5 +1,6 @@
 ﻿using LINQ.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.IQueryable.Queries;
+using LINQ.SelectManyMethod.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,32 @@ namespace LINQ.QueryExecuter
     internal static class QueryRunner
     {
         #region Run Filter
-        internal static void RunFilter()
+        private static void RunFilter()
         {
             Filter.ExecuteFilter();
         }
         #endregion
 
         #region Run Queryable
-        internal static void RunIQueryable()
+        private static void RunIQueryable()
         {
             LinqQueryable.RunQueryable();
+        }
+        #endregion
+
+        #region Run Select Many
+        private static void RunSelectMany()
+        {
+            LinkSelectMany.ExecuteLinkSelectMany();
+        }
+        #endregion
+
+        #region Run All Queries
+        internal static void RunAllQueries()
+        {
+            RunFilter();
+            RunIQueryable();
+            RunSelectMany();
         } 
         #endregion
     }
