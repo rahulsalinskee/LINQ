@@ -1,6 +1,7 @@
 ﻿using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQuaries.IQueryable.Queries;
-using LINQ.LinqQuaries.SelectManyMethod.Queries;
+using LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries;
+using LINQ.LinqQuaries.ProjectionMethods.SelectMethod.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +26,15 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
-        #region Run Select Many
+        #region Run Projection - Select Many
         private static void RunSelectMany()
         {
-            LinkSelectMany.ExecuteLinkSelectMany();
+            LinqSelectMany.ExecuteLinkSelectMany();
+        }
+
+        private static void RunSelect()
+        {
+            LinqSelect.ExecuteLinkSelect();
         }
         #endregion
 
@@ -38,6 +44,7 @@ namespace LINQ.QueryExecuter
             RunFilter();
             RunIQueryable();
             RunSelectMany();
+            RunSelect();
         } 
         #endregion
     }

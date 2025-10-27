@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.SelectManyMethod.Queries
+namespace LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries
 {
-    internal class LinkSelectMany
+    internal class LinqSelectMany
     {
         internal static void ExecuteLinkSelectMany()
         {
@@ -24,7 +24,7 @@ namespace LINQ.LinqQuaries.SelectManyMethod.Queries
             {
                 foreach (var employee in employeesWithSameAnnualSalary)
                 {
-                    Console.WriteLine($"Employee Name: {employee.FirstName} - Employee Annual Salary: {employee.AnnualSalary}");
+                    Console.WriteLine($"Employee Name: {employee.FirstName} \nEmployee Annual Salary: {employee.AnnualSalary}\n");
                 }
             }
             else
