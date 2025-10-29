@@ -1,4 +1,5 @@
-﻿using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
+﻿using LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries;
+using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQuaries.IQueryable.Queries;
 using LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries;
 using LINQ.LinqQuaries.ProjectionMethods.SelectMethod.Queries;
@@ -38,6 +39,13 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Filter Operator - Where
+        private static void RunWhere()
+        {
+            LinqWhere.ExecuteWhereMethod();
+        } 
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -45,7 +53,8 @@ namespace LINQ.QueryExecuter
             RunIQueryable();
             RunSelectMany();
             RunSelect();
-        } 
+            RunWhere();
+        }
         #endregion
     }
 }

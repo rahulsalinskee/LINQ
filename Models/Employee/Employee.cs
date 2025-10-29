@@ -16,6 +16,8 @@ namespace LINQ.Models.Employee
 
         public int DepartmentId { get; set; } // Foreign Key to Department
 
+        public Department.Department? Department { get; set; }
+
         public decimal AnnualSalary { get; set; }
 
         public bool IsManager{ get; set; }
