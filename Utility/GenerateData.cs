@@ -15,25 +15,60 @@ namespace LINQ.Utility
             return Employees();
         }
 
-        internal static IEnumerable<Department> GetDepartments()
-        {
-            return Departments();
-        }
-
         private static IEnumerable<Employee> Employees()
         {
             return new List<Employee>
             {
-                new Employee { Id = 1, FirstName = "John", LastName = "Doe", DepartmentId = 1, AnnualSalary = 60000, IsManager = false },
-                new Employee { Id = 2, FirstName = "Jane", LastName = "Smith", DepartmentId = 2, AnnualSalary = 80000, IsManager = true },
-                new Employee { Id = 3, FirstName = "Sam", LastName = "Davis", DepartmentId = 1, AnnualSalary = 55000, IsManager = false },
-                new Employee { Id = 4, FirstName = "Ava", LastName = "Johnson", DepartmentId = 3, AnnualSalary = 95000, IsManager = true },
-                new Employee { Id = 5, FirstName = "Tom", LastName = "Davis", DepartmentId = 4, AnnualSalary = 72000, IsManager = false },
-                new Employee { Id = 6, FirstName = "Emily", LastName = "Miller", DepartmentId = 1, AnnualSalary = 58000, IsManager = false },
-                new Employee { Id = 7, FirstName = "Mark", LastName = "Wilson", DepartmentId = 3, AnnualSalary = 88000, IsManager = true },
-                new Employee { Id = 8, FirstName = "Sara", LastName = "Anderson", DepartmentId = 4, AnnualSalary = 75000, IsManager = false },
-                new Employee { Id = 9, FirstName = "Kevin", LastName = "Taylor", DepartmentId = 5, AnnualSalary = 59000, IsManager = false },
-                new Employee { Id = 10, FirstName = "Ava", LastName = "Davis", DepartmentId = 5, AnnualSalary = 85000, IsManager = true },
+                new Employee
+                {
+                    Id = 1, FirstName = "John", LastName = "Doe", AnnualSalary = 60000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 5),
+                },
+                new Employee
+                {
+                    Id = 2, FirstName = "Jane", LastName = "Smith", AnnualSalary = 80000, IsManager = true,
+                    Department = Departments().FirstOrDefault(department => department.Id == 2),
+                },
+                new Employee
+                {
+                    Id = 3, FirstName = "Sam", LastName = "Davis", AnnualSalary = 55000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 1),
+                },
+                new Employee
+                {
+                    Id = 4, FirstName = "Ava", LastName = "Johnson", AnnualSalary = 95000, IsManager = true,
+                    Department = Departments().FirstOrDefault(department => department.Id == 3),
+                },
+                new Employee
+                {
+                    Id = 5, FirstName = "Tom", LastName = "Davis", AnnualSalary = 72000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 4),
+                },
+                new Employee
+                {
+                    Id = 6, FirstName = "Emily", LastName = "Miller", AnnualSalary = 58000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 1),
+                },
+                new Employee
+                {
+                    Id = 7, FirstName = "Mark", LastName = "Wilson", AnnualSalary = 88000, IsManager = true,
+                    Department = Departments().FirstOrDefault(department => department.Id == 3)
+                },
+                new Employee
+                {
+                    Id = 8, FirstName = "Sara", LastName = "Anderson", AnnualSalary = 75000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 4),
+                },
+                new Employee
+                {
+                    Id = 9, FirstName = "Kevin", LastName = "Taylor", AnnualSalary = 59000, IsManager = false,
+                    Department = Departments().FirstOrDefault(department => department.Id == 5)
+                },
+                new Employee 
+                { 
+                    Id = 10, FirstName = "Ava", LastName = "Davis", AnnualSalary = 85000, IsManager = true, 
+                    Department = Departments().FirstOrDefault(department => department.Id == 5) 
+                },
             };
         }
 
