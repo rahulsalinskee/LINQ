@@ -4,8 +4,10 @@ using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
-using LINQ.LinqQueries.Sort.OrderBy.AsendingOrder.Queries;
+using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
+using LINQ.LinqQueries.Sort.ThenBy.AscendingOrder.Queries;
+using LINQ.LinqQueries.Sort.ThenBy.DescendingOrder.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +66,16 @@ namespace LINQ.QueryExecuter
         {
             LinqOrderByForDesending.ExecuteOrderByForDescending();
         }
+
+        internal static void RunThenByForAscending()
+        {
+            LinqThenByAscending.ExecuteThenByAscending();
+        }
+        
+        internal static void RunThenByForDescending()
+        {
+            LinkThenByDescending.ExecuteThenByDescending();
+        }
         #endregion
 
         #region Run All Queries
@@ -77,6 +89,8 @@ namespace LINQ.QueryExecuter
             RunOfType();
             RunOrderByForAscending();
             RunOrderByForDescending();
+            RunThenByForAscending();
+            RunThenByForDescending();
         }
         #endregion
     }

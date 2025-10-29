@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQueries.Sort.OrderBy.AsendingOrder.Queries
+namespace LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries
 {
     internal class LinqOrderByForAscending
     {
