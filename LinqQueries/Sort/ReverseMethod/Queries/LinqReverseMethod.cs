@@ -18,20 +18,21 @@ namespace LINQ.LinqQueries.Sort.ReverseMethod.Queries
 
             var employees = GenerateData.GetEmployees();
 
-            Console.WriteLine("Original sequence of employees:");
+            Console.WriteLine("Original sequence of employees: \n");
 
             foreach (var employee in employees)
             {
-                Console.WriteLine($"Employee Name: {employee.FirstName} \nEmployee Annual Salary: {employee.AnnualSalary}");
+                Console.WriteLine($"Employee Name: {employee.FirstName} \nEmployee Annual Salary: {employee.AnnualSalary} \n");
             }
 
             // Using LINQ Reverse method to reverse the order of elements
-            var reversedEmployees = employees.Select(employee => new { Salary = employee.AnnualSalary }).Reverse();
+            var reversedEmployees = employees.Select(employee => new { FN = employee.FirstName, Salary = employee.AnnualSalary }).Reverse();
 
-            Console.WriteLine("Reversed Numbers:");
+            Console.WriteLine("\nReversed Numbers: \n");
+
             foreach (var reversedEmployee in reversedEmployees)
             {
-                Console.WriteLine($"Employee Annual Salary Reversed: {reversedEmployee.Salary}");
+                Console.WriteLine($"Employee Name: {reversedEmployee.FN} \nEmployee Annual Salary: {reversedEmployee.Salary} \n");
             }
         }
     }
