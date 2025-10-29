@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQueries.Sort.OrderBy.DesendingOrder.Queries
+namespace LINQ.LinqQueries.Sort.ThenBy.AsendingOrder.Quesries
 {
-    internal class LinqOrderByForDesending
+    internal class LinqThenByAscending
     {
     }
 }

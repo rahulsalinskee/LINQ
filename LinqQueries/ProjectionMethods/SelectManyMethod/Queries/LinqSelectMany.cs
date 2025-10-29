@@ -12,7 +12,7 @@ namespace LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries
         internal static void ExecuteLinqSelectMany()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("--------------------- Select Many ---------------------");
+            Console.WriteLine("\n--------------------- Select Many ---------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Link Select Many \n\n");
 

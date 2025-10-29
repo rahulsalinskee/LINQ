@@ -11,7 +11,7 @@ namespace LINQ.LinqQueries.IQueryable.Queries
     {
         internal static void RunQueryable()
         {
-            Console.WriteLine("--------------------- IQueryable ---------------------");
+            Console.WriteLine("\n--------------------- IQueryable ---------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - IQueryable \n\n");
 

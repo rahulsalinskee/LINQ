@@ -13,7 +13,7 @@ namespace LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod
         internal static void ExecuteFilter()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("--------------------- Filter ---------------------");
+            Console.WriteLine("\n--------------------- Filter ---------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Filter \n\n");
 

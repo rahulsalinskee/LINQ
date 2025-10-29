@@ -14,7 +14,7 @@ namespace LINQ.LinqQueries.FilteringOperators.OfTypeMethod
         internal static void ExecuteOfTypeMethod()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("--------------------- OfType ---------------------");
+            Console.WriteLine("\n--------------------- OfType ---------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - OfType \n\n");
             var employees = GenerateData.GetEmployees();
