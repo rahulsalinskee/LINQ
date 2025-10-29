@@ -9,7 +9,7 @@ namespace LINQ.LinqQuaries.ProjectionMethods.SelectMethod.Queries
 {
     internal static class LinqSelect
     {
-        internal static void ExecuteLinkSelect()
+        internal static void ExecuteLinqSelect()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("--------------------- Select ---------------------");

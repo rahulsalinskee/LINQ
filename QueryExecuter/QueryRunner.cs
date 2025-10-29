@@ -30,12 +30,12 @@ namespace LINQ.QueryExecuter
         #region Run Projection - Select Many
         private static void RunSelectMany()
         {
-            LinqSelectMany.ExecuteLinkSelectMany();
+            LinqSelectMany.ExecuteLinqSelectMany();
         }
 
         private static void RunSelect()
         {
-            LinqSelect.ExecuteLinkSelect();
+            LinqSelect.ExecuteLinqSelect();
         }
         #endregion
 

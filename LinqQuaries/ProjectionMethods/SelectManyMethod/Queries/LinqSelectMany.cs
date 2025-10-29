@@ -9,7 +9,7 @@ namespace LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries
 {
     internal class LinqSelectMany
     {
-        internal static void ExecuteLinkSelectMany()
+        internal static void ExecuteLinqSelectMany()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("--------------------- Select Many ---------------------");
