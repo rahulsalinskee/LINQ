@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LINQ.LinqQueries.Sort.ThenBy.DescendingOrder.Queries
 {
-    internal class LinkThenByDescending
+    internal class LinqThenByDescending
     {
         internal static void ExecuteThenByDescending()
         {
@@ -26,7 +26,7 @@ namespace LINQ.LinqQueries.Sort.ThenBy.DescendingOrder.Queries
 
             foreach (var employee in sortedEmployees)
             {
-                Console.WriteLine($"First Name : {employee.FN}, Last Name : {employee.LN} , Department Name : {employee.DepartmentName}");
+                Console.WriteLine($"First Name : {employee.FN}, Last Name : {employee.LN}, Department Name : {employee.DepartmentName}");
             }
         }
     }

@@ -6,6 +6,7 @@ using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
+using LINQ.LinqQueries.Sort.ReverseMethod.Queries;
 using LINQ.LinqQueries.Sort.ThenBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.ThenBy.DescendingOrder.Queries;
 using System;
@@ -57,24 +58,29 @@ namespace LINQ.QueryExecuter
         #endregion
 
         #region Sorting Operators
-        internal static void RunOrderByForAscending()
+        private static void RunOrderByForAscending()
         {
             LinqOrderByForAscending.ExecuteOrderByForAscending();
         }
         
-        internal static void RunOrderByForDescending()
+        private static void RunOrderByForDescending()
         {
             LinqOrderByForDesending.ExecuteOrderByForDescending();
         }
 
-        internal static void RunThenByForAscending()
+        private static void RunThenByForAscending()
         {
             LinqThenByAscending.ExecuteThenByAscending();
         }
         
-        internal static void RunThenByForDescending()
+        private static void RunThenByForDescending()
         {
-            LinkThenByDescending.ExecuteThenByDescending();
+            LinqThenByDescending.ExecuteThenByDescending();
+        }
+
+        private static void RunLinqReverse()
+        {
+            LinqReverseMethod.ExecuteReverse();
         }
         #endregion
 
@@ -91,6 +97,7 @@ namespace LINQ.QueryExecuter
             RunOrderByForDescending();
             RunThenByForAscending();
             RunThenByForDescending();
+            RunLinqReverse();
         }
         #endregion
     }
