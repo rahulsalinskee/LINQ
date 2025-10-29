@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.ProjectionMethods.SelectMethod.Queries
+namespace LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries
 {
     internal static class LinqSelect
     {

@@ -1,4 +1,4 @@
-﻿using LINQ.LinqQuaries.FilterMethod.Extensions;
+﻿using LINQ.LinqQueries.FilterMethod.Extensions;
 using LINQ.Utility;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod
+namespace LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod
 {
     internal static class Filter
     {

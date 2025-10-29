@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.FilteringOperators.OfTypeMethod
+namespace LINQ.LinqQueries.FilteringOperators.OfTypeMethod
 {
     internal class LinqOfType
     {

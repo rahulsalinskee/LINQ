@@ -1,9 +1,9 @@
-﻿using LINQ.LinqQuaries.FilteringOperators.OfTypeMethod;
-using LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries;
-using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
-using LINQ.LinqQuaries.IQueryable.Queries;
-using LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries;
-using LINQ.LinqQuaries.ProjectionMethods.SelectMethod.Queries;
+﻿using LINQ.LinqQueries.FilteringOperators.OfTypeMethod;
+using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
+using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
+using LINQ.LinqQueries.IQueryable.Queries;
+using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
+using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

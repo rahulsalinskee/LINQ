@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries
+namespace LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries
 {
     internal class LinqSelectMany
     {

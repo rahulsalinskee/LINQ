@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries
+namespace LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries
 {
     internal class LinqWhere
     {
