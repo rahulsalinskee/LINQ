@@ -12,7 +12,7 @@ namespace LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries
         internal static void ExecuteWhereMethod()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("--------------------- Where ----------------------");
+            Console.WriteLine("--------------------- Filtering Operator - Where ----------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Where \n\n");
             var employees = GenerateData.GetEmployees();

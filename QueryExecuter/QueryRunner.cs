@@ -1,4 +1,5 @@
-﻿using LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries;
+﻿using LINQ.LinqQuaries.FilteringOperators.OfTypeMethod;
+using LINQ.LinqQuaries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQuaries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQuaries.IQueryable.Queries;
 using LINQ.LinqQuaries.ProjectionMethods.SelectManyMethod.Queries;
@@ -43,7 +44,12 @@ namespace LINQ.QueryExecuter
         private static void RunWhere()
         {
             LinqWhere.ExecuteWhereMethod();
-        } 
+        }
+        
+        private static void RunOfType()
+        {
+            LinqOfType.ExecuteOfTypeMethod();
+        }
         #endregion
 
         #region Run All Queries
@@ -54,6 +60,7 @@ namespace LINQ.QueryExecuter
             RunSelectMany();
             RunSelect();
             RunWhere();
+            RunOfType();
         }
         #endregion
     }
