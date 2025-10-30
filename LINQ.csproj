@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="LinqQueries\QuantifierOperators\ContainsComparer\Queries\" />
-    <Folder Include="LinqQueries\SetOperations\ExceptMethod\Queries\" />
     <Folder Include="LinqQueries\SetOperations\IntersectMethod\Queries\" />
     <Folder Include="LinqQueries\SetOperations\UnionMethod\Queries\" />
   </ItemGroup>
