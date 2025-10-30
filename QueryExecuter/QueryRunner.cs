@@ -102,6 +102,11 @@ namespace LINQ.QueryExecuter
         {
             LinqContains.ExecuteContains();
         }
+
+        private static void RunContainsComparer()
+        {
+            LinqContains.ExecuteContainsComparer();
+        }
         #endregion
 
         #region Run All Queries
@@ -121,6 +126,7 @@ namespace LINQ.QueryExecuter
             RunAll();
             RunAny();
             RunContains();
+            RunContainsComparer();
         }
         #endregion
     }

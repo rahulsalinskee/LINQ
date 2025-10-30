@@ -1,4 +1,5 @@
-﻿using LINQ.Utility;
+﻿using LINQ.LinqQueries.QuantifierOperators.ContainsComparer.Comparer;
+using LINQ.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,24 @@ namespace LINQ.LinqQueries.QuantifierOperators.ContainsMethod.Queries
             var isEmployeeFound = employees.Contains(targetEmployees);
 
             Console.WriteLine($"Is Employee Found: {isEmployeeFound}");
+        }
+
+        internal static void ExecuteContainsComparer()
+        {
+            Console.WriteLine("\n------------------- Contains Comparer Method -------------------");
+            Console.WriteLine();
+            Console.WriteLine("This is Language Integrated Query For - Contains Comparer Method \n\n");
+
+            var employees = GenerateData.GetEmployees();
+
+            var targetEmployees = employees.FirstOrDefault(employee => employee.FirstName == "John" && 
+            employee.LastName == "Doe" && employee?.Department?.ShortName == "Admin");
+
+            EmployeeComparer employeeComparer = new();
+
+            var isEmployeeFound = employees.Contains(value: targetEmployees, comparer: employeeComparer);
+
+            Console.WriteLine($"Is Employee Found With Comparer Method: {isEmployeeFound}");
         }
     }
 }
