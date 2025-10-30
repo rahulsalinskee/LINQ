@@ -4,6 +4,7 @@ using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
+using LINQ.LinqQueries.QuantifierOperators.AllMethod.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
 using LINQ.LinqQueries.Sort.ReverseMethod.Queries;
@@ -33,7 +34,7 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
-        #region Run Projection - Select Many
+        #region Run Projection - SelectMany, Select
         private static void RunSelectMany()
         {
             LinqSelectMany.ExecuteLinqSelectMany();
@@ -57,7 +58,7 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
-        #region Sorting Operators
+        #region Sorting Operators - OrderBy, OrderByDescend, ThenBy, ThenByDescend, Reverse
         private static void RunOrderByForAscending()
         {
             LinqOrderByForAscending.ExecuteOrderByForAscending();
@@ -78,9 +79,16 @@ namespace LINQ.QueryExecuter
             LinqThenByDescending.ExecuteThenByDescending();
         }
 
-        private static void RunLinqReverse()
+        private static void RunReverse()
         {
             LinqReverseMethod.ExecuteReverse();
+        }
+        #endregion
+
+        #region QuantifierOperators - All, Any, Contains
+        private static void RunAll()
+        {
+            LinqAll.ExecuteAll();
         }
         #endregion
 
@@ -97,7 +105,8 @@ namespace LINQ.QueryExecuter
             RunOrderByForDescending();
             RunThenByForAscending();
             RunThenByForDescending();
-            RunLinqReverse();
+            RunReverse();
+            RunAll();
         }
         #endregion
     }
