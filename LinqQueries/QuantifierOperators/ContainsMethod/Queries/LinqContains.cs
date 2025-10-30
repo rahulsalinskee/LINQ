@@ -1,5 +1,5 @@
-﻿using LINQ.LinqQueries.QuantifierOperators.ContainsComparer.Comparer;
-using LINQ.Utility;
+﻿using LINQ.Utility;
+using LINQ.Utility.Comparer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

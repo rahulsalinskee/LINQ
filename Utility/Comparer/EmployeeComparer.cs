@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQ.LinqQueries.QuantifierOperators.ContainsComparer.Comparer
+namespace LINQ.Utility.Comparer
 {
     internal class EmployeeComparer : IEqualityComparer<Employee>
     {

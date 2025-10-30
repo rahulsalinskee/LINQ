@@ -7,6 +7,8 @@ using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
 using LINQ.LinqQueries.QuantifierOperators.AllMethod.Queries;
 using LINQ.LinqQueries.QuantifierOperators.AnyMethod.Queries;
 using LINQ.LinqQueries.QuantifierOperators.ContainsMethod.Queries;
+using LINQ.LinqQueries.SetOperations.DistinctMethod.ComparerQueries;
+using LINQ.LinqQueries.SetOperations.DistinctMethod.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
 using LINQ.LinqQueries.Sort.ReverseMethod.Queries;
@@ -109,6 +111,18 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Set Operations - Distinct
+        private static void RunDistinct()
+        {
+            LinqDistinct.ExecuteDistinct();
+        }
+
+        private static void RunDistinctComparer()
+        {
+            LinqDistinctComparer.ExecuteDistinctComparer();
+        }
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -127,6 +141,8 @@ namespace LINQ.QueryExecuter
             RunAny();
             RunContains();
             RunContainsComparer();
+            RunDistinct();
+            RunDistinctComparer();
         }
         #endregion
     }
