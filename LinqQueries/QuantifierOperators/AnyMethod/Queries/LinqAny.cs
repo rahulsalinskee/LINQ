@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,29 @@ namespace LINQ.LinqQueries.QuantifierOperators.AnyMethod.Queries
     {
         internal static void ExecuteAny()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n--------------------- Any Method ---------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Any Method \n\n");
-            List<int> numbers = new List<int> { 1, 3, 5, 7, 9 };
+
             // Using LINQ Any method to check if there are any even numbers in the list
-            bool hasEvenNumbers = numbers.Any(num => num % 2 == 0);
-            if (hasEvenNumbers)
+            var employees = GenerateData.GetEmployees();
+
+            var isEmployeeItManager = employees.Where(employee => employee?.Department?.ShortName == "IT").Select(employee => new
             {
-                Console.WriteLine("The list contains even numbers.");
+                FN = employee.FirstName,
+                LN = employee.LastName,
+                DepartmentName = employee?.Department?.ShortName,
+                Salary = employee?.AnnualSalary,
+                IsManager = employee?.IsManager
+            }).Any(employee => employee.IsManager is true);
+
+            if (isEmployeeItManager)
+            {
+                Console.WriteLine("There is an employee who is in IT and Manager");
             }
             else
             {
-                Console.WriteLine("The list does not contain any even numbers.");
+                Console.WriteLine("There is NO employee who is in IT and Manager");
             }
         }
     }

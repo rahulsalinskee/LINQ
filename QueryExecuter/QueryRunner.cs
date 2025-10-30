@@ -5,6 +5,7 @@ using LINQ.LinqQueries.IQueryable.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectMethod.Queries;
 using LINQ.LinqQueries.QuantifierOperators.AllMethod.Queries;
+using LINQ.LinqQueries.QuantifierOperators.AnyMethod.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
 using LINQ.LinqQueries.Sort.ReverseMethod.Queries;
@@ -90,6 +91,11 @@ namespace LINQ.QueryExecuter
         {
             LinqAll.ExecuteAll();
         }
+
+        private static void RunAny()
+        {
+            LinqAny.ExecuteAny();
+        }
         #endregion
 
         #region Run All Queries
@@ -107,6 +113,7 @@ namespace LINQ.QueryExecuter
             RunThenByForDescending();
             RunReverse();
             RunAll();
+            RunAny();
         }
         #endregion
     }
