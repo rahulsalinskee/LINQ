@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +11,17 @@ namespace LINQ.LinqQueries.QuantifierOperators.ContainsMethod.Queries
     {
         internal static void ExecuteContains()
         {
-            Console.WriteLine("\n--------------------- Contains Method ---------------------");
+            Console.WriteLine("\n------------------- Contains Method -------------------");
             Console.WriteLine();
             Console.WriteLine("This is Language Integrated Query For - Contains Method \n\n");
-            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-            int numberToCheck = 3;
-            // Using LINQ Contains method to check if the list contains the specified number
-            bool containsNumber = numbers.Contains(numberToCheck);
-            if (containsNumber)
-            {
-                Console.WriteLine($"The list contains the number {numberToCheck}.");
-            }
-            else
-            {
-                Console.WriteLine($"The list does not contain the number {numberToCheck}.");
-            }
 
+            var employees = GenerateData.GetEmployees();
+
+            var targetEmployees = employees.FirstOrDefault(employee => employee.FirstName == "John" && employee.LastName == "Doe" && employee?.Department?.ShortName == "Admin");
+
+            var isEmployeeFound = employees.Contains(targetEmployees);
+
+            Console.WriteLine($"Is Employee Found: {isEmployeeFound}");
         }
     }
 }
