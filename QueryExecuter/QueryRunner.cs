@@ -11,6 +11,8 @@ using LINQ.LinqQueries.SetOperations.DistinctMethod.ComparerQueries;
 using LINQ.LinqQueries.SetOperations.DistinctMethod.Queries;
 using LINQ.LinqQueries.SetOperations.ExceptMethod.ComparerQueries;
 using LINQ.LinqQueries.SetOperations.ExceptMethod.Queries;
+using LINQ.LinqQueries.SetOperations.IntersectMethod.ComparerQueries;
+using LINQ.LinqQueries.SetOperations.IntersectMethod.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.AscendingOrder.Queries;
 using LINQ.LinqQueries.Sort.OrderBy.DescendingOrder.Queries;
 using LINQ.LinqQueries.Sort.ReverseMethod.Queries;
@@ -133,6 +135,16 @@ namespace LINQ.QueryExecuter
         {
             LinqExceptComparer.ExecuteExceptComparer();
         }
+
+        private static void RunIntersect()
+        {
+            LinqIntersect.ExecuteIntersect();
+        }
+
+        private static void RunIntersectComparer()
+        {
+            LinqIntersectComparer.ExecuteIntersectComparer();
+        }
         #endregion
 
         #region Run All Queries
@@ -157,6 +169,8 @@ namespace LINQ.QueryExecuter
             RunDistinctComparer();
             RunExcept();
             RunExceptComparer();
+            RunIntersect();
+            RunIntersectComparer();
         }
         #endregion
     }
