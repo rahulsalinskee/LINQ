@@ -2,6 +2,7 @@
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
+using LINQ.LinqQueries.PartitioningOperators.PaginationFunctionality;
 using LINQ.LinqQueries.PartitioningOperators.SkipMethod.Queries;
 using LINQ.LinqQueries.PartitioningOperators.SkipWhileMethod.Queries;
 using LINQ.LinqQueries.PartitioningOperators.TakeOperator.Queries;
@@ -185,6 +186,13 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Pagination
+        private static void RunPagination()
+        {
+            Pagination.ExecutePagination();
+        }
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -215,6 +223,7 @@ namespace LINQ.QueryExecuter
             RunTakeWhile();
             RunSkip();
             RunSkipWhile();
+            RunPagination();
         }
         #endregion
     }
