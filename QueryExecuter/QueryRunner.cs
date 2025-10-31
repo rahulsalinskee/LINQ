@@ -2,6 +2,7 @@
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
+using LINQ.LinqQueries.PartitioningOperators.SkipMethod.Queries;
 using LINQ.LinqQueries.PartitioningOperators.TakeOperator.Queries;
 using LINQ.LinqQueries.PartitioningOperators.TakeWhileMethod.Queries;
 using LINQ.LinqQueries.ProjectionMethods.SelectManyMethod.Queries;
@@ -171,6 +172,11 @@ namespace LINQ.QueryExecuter
         {
             LinqTakeWhileMethod.ExecuteTakeWhile();
         }
+
+        private static void RunSkip()
+        {
+            LinqSkipMethod.ExecuteSkip();
+        }
         #endregion
 
         #region Run All Queries
@@ -201,6 +207,7 @@ namespace LINQ.QueryExecuter
             RunUnionComparer();
             RunTake();
             RunTakeWhile();
+            RunSkip();
         }
         #endregion
     }
