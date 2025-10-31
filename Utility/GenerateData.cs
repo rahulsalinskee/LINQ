@@ -15,6 +15,11 @@ namespace LINQ.Utility
             return Employees();
         }
 
+        internal static IEnumerable<Department> GetDepartments()
+        {
+            return Departments();
+        }
+
         private static IEnumerable<Employee> Employees()
         {
             return new List<Employee>
