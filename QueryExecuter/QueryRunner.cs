@@ -2,6 +2,7 @@
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
+using LINQ.LinqQueries.JoinOperations.GroupJoinMethod.Queries;
 using LINQ.LinqQueries.JoinOperations.InnerJoinOperation.Queries;
 using LINQ.LinqQueries.JoinOperations.InnerJoinWithMultipleTables.Queries;
 using LINQ.LinqQueries.PartitioningOperators.PaginationFunctionality;
@@ -208,6 +209,13 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Group Jon
+        private static void RunGroupJoin()
+        {
+            LinqGroupJoin.ExecuteGroupJoin();
+        }
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -240,6 +248,7 @@ namespace LINQ.QueryExecuter
             RunSkipWhile();
             RunInnerJoin();
             RunInnerJoinInMultipleTables();
+            RunGroupJoin();
 
             RunPagination(); /* This has to be in the last */
         }
