@@ -21,5 +21,9 @@ namespace LINQ.Models.Employee
         public decimal AnnualSalary { get; set; }
 
         public bool IsManager{ get; set; }
+
+        public int AddressId { get; set; }
+
+        public Address.Address? Address { get; set; }
     }
 }

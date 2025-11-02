@@ -2,6 +2,8 @@
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
+using LINQ.LinqQueries.JoinOperations.InnerJoinOperation.Queries;
+using LINQ.LinqQueries.JoinOperations.InnerJoinWithMultipleTables.Queries;
 using LINQ.LinqQueries.PartitioningOperators.PaginationFunctionality;
 using LINQ.LinqQueries.PartitioningOperators.SkipMethod.Queries;
 using LINQ.LinqQueries.PartitioningOperators.SkipWhileMethod.Queries;
@@ -28,6 +30,7 @@ using LINQ.LinqQueries.Sort.ThenBy.DescendingOrder.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -193,6 +196,18 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Join Operator - Inner Join, Left Join, Right Join, Full Join
+        private static void RunInnerJoin()
+        {
+            LinqInnerJoin.ExecuteInnerJoin();
+        }
+
+        private static void RunInnerJoinInMultipleTables()
+        {
+            LinqInnerJoinInMultipleTables.ExecuteInnerJoinInMultipleTables();
+        }
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -223,7 +238,10 @@ namespace LINQ.QueryExecuter
             RunTakeWhile();
             RunSkip();
             RunSkipWhile();
-            RunPagination();
+            RunInnerJoin();
+            RunInnerJoinInMultipleTables();
+
+            RunPagination(); /* This has to be in the last */
         }
         #endregion
     }

@@ -1,4 +1,5 @@
-﻿using LINQ.Models.Department;
+﻿using LINQ.Models.Address;
+using LINQ.Models.Department;
 using LINQ.Models.Employee;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,11 @@ namespace LINQ.Utility
         internal static IEnumerable<Department> GetDepartments()
         {
             return Departments();
+        }
+
+        internal static IEnumerable<Address> GetAddresses()
+        {
+            return Addresses();
         }
 
         private static IEnumerable<Employee> Employees()
@@ -86,6 +92,23 @@ namespace LINQ.Utility
                 new Department { Id = 3, ShortName = "IT", LongName = "Information Technology" },
                 new Department { Id = 4, ShortName = "Finance", LongName = "Finance and Accounting" },
                 new Department { Id = 5, ShortName = "Admin", LongName = "Administrative Services" }
+            };
+        }
+
+        private static IEnumerable<Address> Addresses()
+        {
+            return new List<Address>
+            {
+                new Address { Id = 1, AddressLine1 = "123 Main St", City = "New York", State = "NY", ZipCode = "10001", EmployeeId = 1 },
+                new Address { Id = 2, AddressLine1 = "298 Birch St", City = "San Francisco", State = "CA", ZipCode = "94101", EmployeeId = 9 },
+                new Address { Id = 3, AddressLine1 = "321 Maple Dr", City = "Houston", State = "TX", ZipCode = "77001", EmployeeId = 4 },
+                new Address { Id = 4, AddressLine1 = "789 Pine Rd", City = "Chicago", State = "IL", ZipCode = "60601", EmployeeId = 3 },
+                new Address { Id = 5, AddressLine1 = "456 Oak Ave", City = "Los Angeles", State = "CA", ZipCode = "90001", EmployeeId = 2 },
+                new Address { Id = 6, AddressLine1 = "654 Cedar Ln", City = "Miami", State = "FL", ZipCode = "33101", EmployeeId = 5 },
+                new Address { Id = 7, AddressLine1 = "985 Zipped St", City = "San Francisco", State = "CA", ZipCode = "94101", EmployeeId = 6 },
+                new Address { Id = 8, AddressLine1 = "253 Berth St", City = "San Francisco", State = "CA", ZipCode = "94101", EmployeeId = 10 },
+                new Address { Id = 9, AddressLine1 = "246 Birch St", City = "San Francisco", State = "CA", ZipCode = "94101", EmployeeId = 7 },
+                new Address { Id = 10, AddressLine1 = "288 Barth St", City = "San Francisco", State = "CA", ZipCode = "94101", EmployeeId = 8 },
             };
         }
     }
