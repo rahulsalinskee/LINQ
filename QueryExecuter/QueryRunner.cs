@@ -5,6 +5,7 @@ using LINQ.LinqQueries.IQueryable.Queries;
 using LINQ.LinqQueries.JoinOperations.GroupJoinMethod.Queries;
 using LINQ.LinqQueries.JoinOperations.InnerJoinOperation.Queries;
 using LINQ.LinqQueries.JoinOperations.InnerJoinWithMultipleTables.Queries;
+using LINQ.LinqQueries.JoinOperations.LeftJoinOperation.Queries;
 using LINQ.LinqQueries.PartitioningOperators.PaginationFunctionality;
 using LINQ.LinqQueries.PartitioningOperators.SkipMethod.Queries;
 using LINQ.LinqQueries.PartitioningOperators.SkipWhileMethod.Queries;
@@ -197,7 +198,7 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
-        #region Join Operator - Inner Join, Left Join, Right Join, Full Join
+        #region Join Operator - Inner Join, Left Join | Left Outer Join, Right Join, Full Join
         private static void RunInnerJoin()
         {
             LinqInnerJoin.ExecuteInnerJoin();
@@ -207,9 +208,17 @@ namespace LINQ.QueryExecuter
         {
             LinqInnerJoinInMultipleTables.ExecuteInnerJoinInMultipleTables();
         }
+
+        /// <summary>
+        /// Left Join Or Left Outer Join
+        /// </summary>
+        private static void RunLeftJoin()
+        {
+            LinqLeftJoin.ExecuteLeftJoin();
+        }
         #endregion
 
-        #region Group Jon
+        #region Group Join
         private static void RunGroupJoin()
         {
             LinqGroupJoin.ExecuteGroupJoin();
@@ -249,6 +258,7 @@ namespace LINQ.QueryExecuter
             RunInnerJoin();
             RunInnerJoinInMultipleTables();
             RunGroupJoin();
+            RunLeftJoin();
 
             RunPagination(); /* This has to be in the last */
         }
