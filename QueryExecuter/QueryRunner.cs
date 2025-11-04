@@ -1,5 +1,7 @@
 ﻿using LINQ.LinqQueries.ElementOperations.ElementAtMethod.Queries;
 using LINQ.LinqQueries.ElementOperations.ElementAtOrDefaultMethod.Queries;
+using LINQ.LinqQueries.ElementOperations.FirstMethod.Queries;
+using LINQ.LinqQueries.ElementOperations.FirstOrDefaultMethod.Queries;
 using LINQ.LinqQueries.FilteringOperators.OfTypeMethod;
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
@@ -237,6 +239,16 @@ namespace LINQ.QueryExecuter
         {
             LinqElementAtOrDefault.ExecuteElementAtOrDefault();
         }
+
+        private static void RunFirst()
+        {
+            LinqFirst.ExecuteFirstMethod();
+        }
+
+        private static void RunFirstOrDefault()
+        {
+            LinqFirstOrDefault.ExecuteFirstOrDefaultMethod();
+        }
         #endregion
 
         #region Run All Queries
@@ -275,6 +287,8 @@ namespace LINQ.QueryExecuter
             RunLeftJoin();
             RunElementAt();
             RunElementAtOrDefault();
+            RunFirst();
+            RunFirstOrDefault();
 
             RunPagination(); /* This has to be in the last */
         }
