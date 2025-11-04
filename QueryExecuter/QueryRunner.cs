@@ -1,4 +1,6 @@
-﻿using LINQ.LinqQueries.FilteringOperators.OfTypeMethod;
+﻿using LINQ.LinqQueries.ElementOperations.ElementAtMethod.Queries;
+using LINQ.LinqQueries.ElementOperations.ElementAtOrDefaultMethod.Queries;
+using LINQ.LinqQueries.FilteringOperators.OfTypeMethod;
 using LINQ.LinqQueries.FilteringOperators.WhereMethod.Queries;
 using LINQ.LinqQueries.FilterMethod.Queries.FilterExtensionMethod;
 using LINQ.LinqQueries.IQueryable.Queries;
@@ -225,6 +227,18 @@ namespace LINQ.QueryExecuter
         }
         #endregion
 
+        #region Element Operations - First, FirstOrDefault, Last, LastOrDefault, Single, SingleOrDefaultElementAt, ElementAtOrDefault
+        private static void RunElementAt()
+        {
+            LinqElementAt.ExecuteElementAt();
+        }
+
+        private static void RunElementAtOrDefault()
+        {
+            LinqElementAtOrDefault.ExecuteElementAtOrDefault();
+        }
+        #endregion
+
         #region Run All Queries
         internal static void RunAllQueries()
         {
@@ -259,6 +273,8 @@ namespace LINQ.QueryExecuter
             RunInnerJoinInMultipleTables();
             RunGroupJoin();
             RunLeftJoin();
+            RunElementAt();
+            RunElementAtOrDefault();
 
             RunPagination(); /* This has to be in the last */
         }
